@@ -2,8 +2,8 @@
 
 # 配置环境
 npm install -g hexo-cli
-mkdir hexo
-cd hexo
+mkdir blog
+cd blog
 hexo init
 npm install
 rm -rf source/_posts
@@ -20,7 +20,7 @@ npm i hexo-image-link --save
 
 # 复制文章到指定目录
 cd ../
-cp -r `ls | grep -v hexo | grep -v config.yml | xargs` hexo/source/_posts
+cp -r `ls | grep -v hexo | grep -v config.yml | xargs` blog/source/_posts
 # 复制配置文件
 cp _config.yml hexo
 
