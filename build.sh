@@ -1,3 +1,3 @@
 npm install
-# git clone <url> themes/stellar
+git clone https://github.com/xaoxuu/hexo-theme-stellar themes/stellar
 hexo g
