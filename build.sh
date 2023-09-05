@@ -25,4 +25,4 @@ cp -r `ls | grep -v hexo | grep -v config.yml | xargs` hexo/source/_posts
 cp config.yml hexo
 
 # 开始构建
-cd hexo && hexo g --config config.yml
+cd hexo && hexo g 
