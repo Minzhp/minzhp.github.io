@@ -22,6 +22,64 @@
       </tags>
   </entry>
   <entry>
+    <title>x(t)=1的傅里叶变换</title>
+    <url>/2019/07/15/blog/x(t)=1%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/</url>
+    <content><![CDATA[
+
+对于$f(t)$，其傅里叶变换$F(j \omega)$为
+$$
+\begin{equation}
+f(t) \Longleftrightarrow F(j \omega) = \int_{-\infty}^{+\infty} f(t) e^{-j \omega t} dt
+\end{equation}
+$$
+
+令$x(t)=e^{-\alpha\left| t \right|},\alpha>0$，则其傅里叶变换为
+
+$$
+\begin{align} 
+X(j\omega) 
+& =\int_{-\infty}^{+\infty}e^{-\alpha\left| t \right|}e^{-j\omega t}dt \\[0.45cm]
+& = \int_{-\infty}^{0}e^{(\alpha-j\omega)t}dt+ \int_{0}^{+\infty}e^{-(\alpha+j\omega)t}dt \\[0.45cm]
+& =\frac{1}{\alpha-j\omega}e^{(\alpha-j\omega)t}\bigg|_{-\infty}^{0}+\frac{1}{\alpha+j\omega}e^{-(\alpha+j\omega)t}\bigg|_{+\infty}^{0} \\[0.45cm]
+& =\frac{1}{\alpha-j\omega}+\frac{1}{\alpha+j\omega} \\[0.45cm]
+& =\frac{2\alpha}{\alpha^2+\omega^2} \\[0.45cm]
+\end{align}  
+$$
+
+由于$\lim_{\alpha \rightarrow 0}{e^{-\alpha \left| t \right|}}=1$，因此，当$\alpha\rightarrow0$时
+$$
+\begin{align} 
+&x(t)=1 \\[0.45cm]
+&X(j\omega)= 
+\begin{cases} 
+\infty & \text{if } \omega=0 \\
+ 0 & \text{if } \omega \ne0 
+ \end{cases} \end{align}
+$$
+
+可知当$\alpha\rightarrow0$时，$X(j \omega)$为$\omega$的冲激函数，其在定义域上的积分为
+
+$$
+\begin{align} 
+{\int_{-\infty}^{+\infty}} \lim_{\alpha \rightarrow 0}X(j \omega) d \omega 
+&=\lim_{\alpha \rightarrow 0}{\int_{-\infty}^{+\infty}}\frac{2\alpha}{\alpha^2+\omega^2}d\omega \\[0.45cm]
+&=\lim_{\alpha \rightarrow 0}{\int_{-\infty}^{+\infty}}\frac{2}{1+{(\frac{\omega}{\alpha})}^2}d(\frac{\omega}{\alpha}) \\[0.45cm]
+&=\lim_{\alpha \rightarrow 0}2\arctan(\frac{\omega}{\alpha})\bigg|_{-\infty}^{+\infty} \\[0.45cm]
+&=2\pi \\[0.45cm]
+\end{align}
+$$
+
+
+]]></content>
+      <categories>
+        <category>博客</category>
+        <category>通信</category>
+      </categories>
+      <tags>
+        <tag>傅里叶变换</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Flask应用部署</title>
     <url>/2019/08/04/note/Flask%E5%BA%94%E7%94%A8%E9%83%A8%E7%BD%B2/</url>
     <content><![CDATA[<p style="display:none">
@@ -69,16 +127,16 @@
       </tags>
   </entry>
   <entry>
-    <title>图像增强：局部平均法</title>
-    <url>/2019/10/15/note/%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%EF%BC%9A%E5%B1%80%E9%83%A8%E5%B9%B3%E5%9D%87%E6%B3%95/</url>
+    <title>图像增强：直方图均衡化</title>
+    <url>/2019/10/15/note/%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%EF%BC%9A%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E5%8C%96/</url>
     <content><![CDATA[<p style="display:none">
-局部平均法也称均值滤波，是一种直接在空间域上进行平滑处理的方法。假设图像是由许多灰度恒定的小块组成，相邻像素间存在很高的空间相关性，而噪声则是统计独立的。因此，可用邻域内各像素的灰度平均值代替该像素原来的灰度值，实现图像的平滑。
+图像直方图描述图像中各灰度级出现的相对频率，基于直方图的灰度变换，可调整图像直方图到一个预定的形状。例如，一些图像由于其灰度分布集中在较窄的区间，对比度很弱，图像细节看不清楚。此时，可采用图像灰度直方图均衡化处理，使得图像的灰度分布趋向均匀，图像所占有的像素灰度间距拉开，进而加大图像反差，改善视觉效果，达到增强的目的。从人眼视觉特性来考虑，一幅图像的直方图如果是均匀分布的，该图像色调给人的感觉会比较协调。
 </p>
 
 
 
 	<div class="row">
-    <embed src="/note_pdf/图像增强_局部平均法.pdf" width="100%" height="550" type="application/pdf">
+    <embed src="/note_pdf/图像增强_直方图均衡化.pdf" width="100%" height="550" type="application/pdf">
 	</div>
 
 
@@ -115,39 +173,16 @@
       </tags>
   </entry>
   <entry>
-    <title>图像增强：直方图均衡化</title>
-    <url>/2019/10/15/note/%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%EF%BC%9A%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E5%8C%96/</url>
+    <title>图像增强：局部平均法</title>
+    <url>/2019/10/15/note/%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%EF%BC%9A%E5%B1%80%E9%83%A8%E5%B9%B3%E5%9D%87%E6%B3%95/</url>
     <content><![CDATA[<p style="display:none">
-图像直方图描述图像中各灰度级出现的相对频率，基于直方图的灰度变换，可调整图像直方图到一个预定的形状。例如，一些图像由于其灰度分布集中在较窄的区间，对比度很弱，图像细节看不清楚。此时，可采用图像灰度直方图均衡化处理，使得图像的灰度分布趋向均匀，图像所占有的像素灰度间距拉开，进而加大图像反差，改善视觉效果，达到增强的目的。从人眼视觉特性来考虑，一幅图像的直方图如果是均匀分布的，该图像色调给人的感觉会比较协调。
+局部平均法也称均值滤波，是一种直接在空间域上进行平滑处理的方法。假设图像是由许多灰度恒定的小块组成，相邻像素间存在很高的空间相关性，而噪声则是统计独立的。因此，可用邻域内各像素的灰度平均值代替该像素原来的灰度值，实现图像的平滑。
 </p>
 
 
 
 	<div class="row">
-    <embed src="/note_pdf/图像增强_直方图均衡化.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>图像处理</category>
-      </categories>
-      <tags>
-        <tag>Matlab</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>图像复原：带阻滤波器</title>
-    <url>/2019/10/20/note/%E5%9B%BE%E5%83%8F%E5%A4%8D%E5%8E%9F%EF%BC%9A%E5%B8%A6%E9%98%BB%E6%BB%A4%E6%B3%A2%E5%99%A8/</url>
-    <content><![CDATA[<p style="display:none">
-带阻滤波器常用于处理含有周期性噪声的图像。周期性噪声可能由于多种因素引入，如图像获取系统中的电子元件等。
-</p>
-
-
-
-	<div class="row">
-    <embed src="/note_pdf/图像复原_带阻滤波器.pdf" width="100%" height="550" type="application/pdf">
+    <embed src="/note_pdf/图像增强_局部平均法.pdf" width="100%" height="550" type="application/pdf">
 	</div>
 
 
@@ -171,6 +206,29 @@
 
 	<div class="row">
     <embed src="/note_pdf/形态学图像处理_边界提取.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>图像处理</category>
+      </categories>
+      <tags>
+        <tag>Matlab</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>图像复原：带阻滤波器</title>
+    <url>/2019/10/20/note/%E5%9B%BE%E5%83%8F%E5%A4%8D%E5%8E%9F%EF%BC%9A%E5%B8%A6%E9%98%BB%E6%BB%A4%E6%B3%A2%E5%99%A8/</url>
+    <content><![CDATA[<p style="display:none">
+带阻滤波器常用于处理含有周期性噪声的图像。周期性噪声可能由于多种因素引入，如图像获取系统中的电子元件等。
+</p>
+
+
+
+	<div class="row">
+    <embed src="/note_pdf/图像复原_带阻滤波器.pdf" width="100%" height="550" type="application/pdf">
 	</div>
 
 
