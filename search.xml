@@ -1,27 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Flask应用部署</title>
-    <url>/2019/08/04/note/Flask%E5%BA%94%E7%94%A8%E9%83%A8%E7%BD%B2/</url>
-    <content><![CDATA[<p style="display:none">
-服务器：阿里云云翼计划轻量应用服务器，1核2G，40G硬盘<br>系统：CentOS7.3<br>环境：Python3.7+MySQL+Gunicorn+Nginx+Supervisor
-</p>
+    <title>x(t)=1的傅里叶变换</title>
+    <url>/2019/07/15/blog/x(t)=1%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/</url>
+    <content><![CDATA[
 
+对于$f(t)$，其傅里叶变换$F(j \omega)$为
+$$
+\begin{equation}
+f(t) \longleftrightarrow F(j \omega) = \int_{-\infty}^{+\infty} f(t) e^{-j \omega t} dt
+\end{equation}
+$$
 
+令$x(t)=e^{-\alpha\left| t \right|},\alpha>0$，则其傅里叶变换为
 
-	<div class="row">
-    <embed src="/note_pdf/Flask应用部署.pdf" width="100%" height="550" type="application/pdf">
-	</div>
+$$
+\begin{align} 
+X(j\omega) 
+& =\int_{-\infty}^{+\infty}e^{-\alpha\left| t \right|}e^{-j\omega t}dt \\[0.45cm]
+& = \int_{-\infty}^{0}e^{(\alpha-j\omega)t}dt+ \int_{0}^{+\infty}e^{-(\alpha+j\omega)t}dt \\[0.45cm]
+& =\frac{1}{\alpha-j\omega}e^{(\alpha-j\omega)t}\bigg|_{-\infty}^{0}+\frac{1}{\alpha+j\omega}e^{-(\alpha+j\omega)t}\bigg|_{+\infty}^{0} \\[0.45cm]
+& =\frac{1}{\alpha-j\omega}+\frac{1}{\alpha+j\omega} \\[0.45cm]
+& =\frac{2\alpha}{\alpha^2+\omega^2} \\[0.45cm]
+\end{align}  
+$$
+
+由于$\lim_{\alpha \rightarrow 0}{e^{-\alpha \left| t \right|}}=1$，因此，当$\alpha\rightarrow0$时
+$$
+\begin{align} 
+&x(t)=1 \\[0.45cm]
+&X(j\omega)= 
+\begin{cases} 
+\infty & \text{if } \omega=0 \\
+ 0 & \text{if } \omega \ne0 
+ \end{cases} \end{align}
+$$
+
+可知当$\alpha\rightarrow0$时，$X(j \omega)$为$\omega$的冲激函数，其在定义域上的积分为
+
+$$
+\begin{align} 
+{\int_{-\infty}^{+\infty}} \lim_{\alpha \rightarrow 0}X(j \omega) d \omega 
+&=\lim_{\alpha \rightarrow 0}{\int_{-\infty}^{+\infty}}\frac{2\alpha}{\alpha^2+\omega^2}d\omega \\[0.45cm]
+&=\lim_{\alpha \rightarrow 0}{\int_{-\infty}^{+\infty}}\frac{2}{1+{(\frac{\omega}{\alpha})}^2}d(\frac{\omega}{\alpha}) \\[0.45cm]
+&=\lim_{\alpha \rightarrow 0}2\arctan(\frac{\omega}{\alpha})\bigg|_{-\infty}^{+\infty} \\[0.45cm]
+&=2\pi \\[0.45cm]
+\end{align}
+$$
+
+因此，当$\alpha\rightarrow0$时，$X(j \omega) = 2 \pi \delta (\omega)$，即$x(t) = 1$的傅里叶变换为
+$$
+x(t) = 1 \longleftrightarrow X(j \omega) = 2 \pi \delta (\omega)
+$$
 
 
 ]]></content>
       <categories>
-        <category>笔记</category>
-        <category>Web学习</category>
+        <category>博客</category>
+        <category>通信</category>
       </categories>
       <tags>
-        <tag>Python</tag>
-        <tag>Flask</tag>
+        <tag>傅里叶变换</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试</title>
+    <url>/2018/09/09/blog/%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<h2 id="简历投递情况"><a href="#简历投递情况" class="headerlink" title="简历投递情况"></a>简历投递情况</h2><h4 id="国家电网-南瑞集团"><a href="#国家电网-南瑞集团" class="headerlink" title="国家电网-南瑞集团"></a>国家电网-南瑞集团</h4><p>链接：<a href="https://job.sgepri.sgcc.com.cn/nari-career-ui/homepage">https://job.sgepri.sgcc.com.cn/nari-career-ui/homepage</a><br>岗位：硬件研发(平台及基础软硬件)<br>城市：武汉<br>状态：待测评</p>
+]]></content>
+      <categories>
+        <category>博客</category>
+        <category>测试</category>
+      </categories>
+      <tags>
+        <tag>t</tag>
       </tags>
   </entry>
   <entry>
@@ -49,26 +101,27 @@
       </tags>
   </entry>
   <entry>
-    <title>LSB算法</title>
-    <url>/2019/09/28/note/LSB%E7%AE%97%E6%B3%95/</url>
+    <title>Flask应用部署</title>
+    <url>/2019/08/04/note/Flask%E5%BA%94%E7%94%A8%E9%83%A8%E7%BD%B2/</url>
     <content><![CDATA[<p style="display:none">
-近期老师布置了一项作业，让我们探索LSB及其改进算法，查了一点资料，做个笔记记一下。作者能力非常有限，此笔记仅供自己参考。首先说一下LSB算法，Least Significant Bits，将秘密信息嵌入到载体图像像素值的最低有效位，也称最不显著，改变这一位置对载体图像的品质影响最小。
+服务器：阿里云云翼计划轻量应用服务器，1核2G，40G硬盘<br>系统：CentOS7.3<br>环境：Python3.7+MySQL+Gunicorn+Nginx+Supervisor
 </p>
 
 
 
 	<div class="row">
-    <embed src="/note_pdf/LSB算法.pdf" width="100%" height="550" type="application/pdf">
+    <embed src="/note_pdf/Flask应用部署.pdf" width="100%" height="550" type="application/pdf">
 	</div>
 
 
 ]]></content>
       <categories>
         <category>笔记</category>
-        <category>图像处理</category>
+        <category>Web学习</category>
       </categories>
       <tags>
-        <tag>Matlab</tag>
+        <tag>Python</tag>
+        <tag>Flask</tag>
       </tags>
   </entry>
   <entry>
@@ -96,16 +149,16 @@ K-means算法由于其简单方便的特性成为最常用的聚类算法之一�
       </tags>
   </entry>
   <entry>
-    <title>两种图像分割方法</title>
-    <url>/2019/11/21/note/%E4%B8%A4%E7%A7%8D%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2%E6%96%B9%E6%B3%95/</url>
+    <title>LSB算法</title>
+    <url>/2019/09/28/note/LSB%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<p style="display:none">
-内容：图像分割<br>1、分水岭算法分割图像（I1.tif，I2.tif）；<br>2、 区域生长法分割图像（coins.png，鼠标选取种子点[x_ceed, y_ceed] = grtpts）。
+近期老师布置了一项作业，让我们探索LSB及其改进算法，查了一点资料，做个笔记记一下。作者能力非常有限，此笔记仅供自己参考。首先说一下LSB算法，Least Significant Bits，将秘密信息嵌入到载体图像像素值的最低有效位，也称最不显著，改变这一位置对载体图像的品质影响最小。
 </p>
 
 
 
 	<div class="row">
-    <embed src="/note_pdf/两种图像分割方法.pdf" width="100%" height="550" type="application/pdf">
+    <embed src="/note_pdf/LSB算法.pdf" width="100%" height="550" type="application/pdf">
 	</div>
 
 
@@ -138,6 +191,29 @@ K-means算法由于其简单方便的特性成为最常用的聚类算法之一�
       </categories>
       <tags>
         <tag>UWB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>两种图像分割方法</title>
+    <url>/2019/11/21/note/%E4%B8%A4%E7%A7%8D%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<p style="display:none">
+内容：图像分割<br>1、分水岭算法分割图像（I1.tif，I2.tif）；<br>2、 区域生长法分割图像（coins.png，鼠标选取种子点[x_ceed, y_ceed] = grtpts）。
+</p>
+
+
+
+	<div class="row">
+    <embed src="/note_pdf/两种图像分割方法.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>图像处理</category>
+      </categories>
+      <tags>
+        <tag>Matlab</tag>
       </tags>
   </entry>
   <entry>
@@ -187,6 +263,29 @@ K-means算法由于其简单方便的特性成为最常用的聚类算法之一�
       </tags>
   </entry>
   <entry>
+    <title>图像增强：局部平均法</title>
+    <url>/2019/10/15/note/%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%EF%BC%9A%E5%B1%80%E9%83%A8%E5%B9%B3%E5%9D%87%E6%B3%95/</url>
+    <content><![CDATA[<p style="display:none">
+局部平均法也称均值滤波，是一种直接在空间域上进行平滑处理的方法。假设图像是由许多灰度恒定的小块组成，相邻像素间存在很高的空间相关性，而噪声则是统计独立的。因此，可用邻域内各像素的灰度平均值代替该像素原来的灰度值，实现图像的平滑。
+</p>
+
+
+
+	<div class="row">
+    <embed src="/note_pdf/图像增强_局部平均法.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>图像处理</category>
+      </categories>
+      <tags>
+        <tag>Matlab</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>图像增强：直方图均衡化</title>
     <url>/2019/10/15/note/%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%EF%BC%9A%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E5%8C%96/</url>
     <content><![CDATA[<p style="display:none">
@@ -220,29 +319,6 @@ K-means算法由于其简单方便的特性成为最常用的聚类算法之一�
 
 	<div class="row">
     <embed src="/note_pdf/图像复原基本算法.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>图像处理</category>
-      </categories>
-      <tags>
-        <tag>Matlab</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>图像增强：局部平均法</title>
-    <url>/2019/10/15/note/%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%EF%BC%9A%E5%B1%80%E9%83%A8%E5%B9%B3%E5%9D%87%E6%B3%95/</url>
-    <content><![CDATA[<p style="display:none">
-局部平均法也称均值滤波，是一种直接在空间域上进行平滑处理的方法。假设图像是由许多灰度恒定的小块组成，相邻像素间存在很高的空间相关性，而噪声则是统计独立的。因此，可用邻域内各像素的灰度平均值代替该像素原来的灰度值，实现图像的平滑。
-</p>
-
-
-
-	<div class="row">
-    <embed src="/note_pdf/图像增强_局部平均法.pdf" width="100%" height="550" type="application/pdf">
 	</div>
 
 
@@ -445,30 +521,6 @@ K-means算法由于其简单方便的特性成为最常用的聚类算法之一�
       </tags>
   </entry>
   <entry>
-    <title>极大似然估计修正测距数据</title>
-    <url>/2023/03/20/note/%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E4%BF%AE%E6%AD%A3%E6%B5%8B%E8%B7%9D%E6%95%B0%E6%8D%AE/</url>
-    <content><![CDATA[<p style="display:none">
-在UWB 测距时，误差主要可分为两类：一类是由于多径、NLOS等引起的误差，这类误差通常大于0且与距离有关；另一类是由于测量噪声、设备时钟漂移等引起的误差，这类误差可近似为均值为0 的高斯分布。因此可使用极大似然估计对数据进行拟合，进而抵消一部分误差的影响。
-</p>
-
-
-
-	<div class="row">
-    <embed src="/note_pdf/极大似然估计修正测距数据.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>UWB定位</category>
-      </categories>
-      <tags>
-        <tag>UWB</tag>
-        <tag>极大似然</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>端口按键判断</title>
     <url>/2020/04/20/note/%E7%AB%AF%E5%8F%A3%E6%8C%89%E9%94%AE%E5%88%A4%E6%96%AD/</url>
     <content><![CDATA[<p style="display:none">
@@ -517,66 +569,27 @@ K-means算法由于其简单方便的特性成为最常用的聚类算法之一�
       </tags>
   </entry>
   <entry>
-    <title>x(t)=1的傅里叶变换</title>
-    <url>/2019/07/15/blog/x(t)=1%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/</url>
-    <content><![CDATA[
+    <title>极大似然估计修正测距数据</title>
+    <url>/2023/03/20/note/%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E4%BF%AE%E6%AD%A3%E6%B5%8B%E8%B7%9D%E6%95%B0%E6%8D%AE/</url>
+    <content><![CDATA[<p style="display:none">
+在UWB 测距时，误差主要可分为两类：一类是由于多径、NLOS等引起的误差，这类误差通常大于0且与距离有关；另一类是由于测量噪声、设备时钟漂移等引起的误差，这类误差可近似为均值为0 的高斯分布。因此可使用极大似然估计对数据进行拟合，进而抵消一部分误差的影响。
+</p>
 
-对于$f(t)$，其傅里叶变换$F(j \omega)$为
-$$
-\begin{equation}
-f(t) \longleftrightarrow F(j \omega) = \int_{-\infty}^{+\infty} f(t) e^{-j \omega t} dt
-\end{equation}
-$$
 
-令$x(t)=e^{-\alpha\left| t \right|},\alpha>0$，则其傅里叶变换为
 
-$$
-\begin{align} 
-X(j\omega) 
-& =\int_{-\infty}^{+\infty}e^{-\alpha\left| t \right|}e^{-j\omega t}dt \\[0.45cm]
-& = \int_{-\infty}^{0}e^{(\alpha-j\omega)t}dt+ \int_{0}^{+\infty}e^{-(\alpha+j\omega)t}dt \\[0.45cm]
-& =\frac{1}{\alpha-j\omega}e^{(\alpha-j\omega)t}\bigg|_{-\infty}^{0}+\frac{1}{\alpha+j\omega}e^{-(\alpha+j\omega)t}\bigg|_{+\infty}^{0} \\[0.45cm]
-& =\frac{1}{\alpha-j\omega}+\frac{1}{\alpha+j\omega} \\[0.45cm]
-& =\frac{2\alpha}{\alpha^2+\omega^2} \\[0.45cm]
-\end{align}  
-$$
-
-由于$\lim_{\alpha \rightarrow 0}{e^{-\alpha \left| t \right|}}=1$，因此，当$\alpha\rightarrow0$时
-$$
-\begin{align} 
-&x(t)=1 \\[0.45cm]
-&X(j\omega)= 
-\begin{cases} 
-\infty & \text{if } \omega=0 \\
- 0 & \text{if } \omega \ne0 
- \end{cases} \end{align}
-$$
-
-可知当$\alpha\rightarrow0$时，$X(j \omega)$为$\omega$的冲激函数，其在定义域上的积分为
-
-$$
-\begin{align} 
-{\int_{-\infty}^{+\infty}} \lim_{\alpha \rightarrow 0}X(j \omega) d \omega 
-&=\lim_{\alpha \rightarrow 0}{\int_{-\infty}^{+\infty}}\frac{2\alpha}{\alpha^2+\omega^2}d\omega \\[0.45cm]
-&=\lim_{\alpha \rightarrow 0}{\int_{-\infty}^{+\infty}}\frac{2}{1+{(\frac{\omega}{\alpha})}^2}d(\frac{\omega}{\alpha}) \\[0.45cm]
-&=\lim_{\alpha \rightarrow 0}2\arctan(\frac{\omega}{\alpha})\bigg|_{-\infty}^{+\infty} \\[0.45cm]
-&=2\pi \\[0.45cm]
-\end{align}
-$$
-
-因此，当$\alpha\rightarrow0$时，$X(j \omega) = 2 \pi \delta (\omega)$，即$x(t) = 1$的傅里叶变换为
-$$
-x(t) = 1 \longleftrightarrow X(j \omega) = 2 \pi \delta (\omega)
-$$
+	<div class="row">
+    <embed src="/note_pdf/极大似然估计修正测距数据.pdf" width="100%" height="550" type="application/pdf">
+	</div>
 
 
 ]]></content>
       <categories>
-        <category>博客</category>
-        <category>通信</category>
+        <category>笔记</category>
+        <category>UWB定位</category>
       </categories>
       <tags>
-        <tag>傅里叶变换</tag>
+        <tag>UWB</tag>
+        <tag>极大似然</tag>
       </tags>
   </entry>
   <entry>
@@ -601,19 +614,6 @@ $$
       <tags>
         <tag>AVR</tag>
         <tag>Proteus</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>测试</title>
-    <url>/2018/09/09/blog/%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<h2 id="简历投递情况"><a href="#简历投递情况" class="headerlink" title="简历投递情况"></a>简历投递情况</h2><h4 id="国家电网-南瑞集团"><a href="#国家电网-南瑞集团" class="headerlink" title="国家电网-南瑞集团"></a>国家电网-南瑞集团</h4><p>链接：<a href="https://job.sgepri.sgcc.com.cn/nari-career-ui/homepage">https://job.sgepri.sgcc.com.cn/nari-career-ui/homepage</a><br>岗位：硬件研发(平台及基础软硬件)<br>城市：武汉<br>状态：待测评<br>备注：知乎评价一般</p>
-]]></content>
-      <categories>
-        <category>博客</category>
-        <category>测试</category>
-      </categories>
-      <tags>
-        <tag>t</tag>
       </tags>
   </entry>
 </search>
