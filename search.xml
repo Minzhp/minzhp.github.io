@@ -1,69 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>x(t)=1的傅里叶变换</title>
-    <url>/2019/07/15/blog/x(t)=1%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/</url>
-    <content><![CDATA[
-
-对于$f(t)$，其傅里叶变换$F(j \omega)$为
-$$
-\begin{equation}
-f(t) \longleftrightarrow F(j \omega) = \int_{-\infty}^{+\infty} f(t) e^{-j \omega t} dt
-\end{equation}
-$$
-
-令$x(t)=e^{-\alpha\left| t \right|},\alpha>0$，则其傅里叶变换为
-
-$$
-\begin{align} 
-X(j\omega) 
-& =\int_{-\infty}^{+\infty}e^{-\alpha\left| t \right|}e^{-j\omega t}dt \\[0.45cm]
-& = \int_{-\infty}^{0}e^{(\alpha-j\omega)t}dt+ \int_{0}^{+\infty}e^{-(\alpha+j\omega)t}dt \\[0.45cm]
-& =\frac{1}{\alpha-j\omega}e^{(\alpha-j\omega)t}\bigg|_{-\infty}^{0}+\frac{1}{\alpha+j\omega}e^{-(\alpha+j\omega)t}\bigg|_{+\infty}^{0} \\[0.45cm]
-& =\frac{1}{\alpha-j\omega}+\frac{1}{\alpha+j\omega} \\[0.45cm]
-& =\frac{2\alpha}{\alpha^2+\omega^2} \\[0.45cm]
-\end{align}  
-$$
-
-由于$\lim_{\alpha \rightarrow 0}{e^{-\alpha \left| t \right|}}=1$，因此，当$\alpha\rightarrow0$时
-$$
-\begin{align} 
-&x(t)=1 \\[0.45cm]
-&X(j\omega)= 
-\begin{cases} 
-\infty & \text{if } \omega=0 \\
- 0 & \text{if } \omega \ne0 
- \end{cases} \end{align}
-$$
-
-可知当$\alpha\rightarrow0$时，$X(j \omega)$为$\omega$的冲激函数，其在定义域上的积分为
-
-$$
-\begin{align} 
-{\int_{-\infty}^{+\infty}} \lim_{\alpha \rightarrow 0}X(j \omega) d \omega 
-&=\lim_{\alpha \rightarrow 0}{\int_{-\infty}^{+\infty}}\frac{2\alpha}{\alpha^2+\omega^2}d\omega \\[0.45cm]
-&=\lim_{\alpha \rightarrow 0}{\int_{-\infty}^{+\infty}}\frac{2}{1+{(\frac{\omega}{\alpha})}^2}d(\frac{\omega}{\alpha}) \\[0.45cm]
-&=\lim_{\alpha \rightarrow 0}2\arctan(\frac{\omega}{\alpha})\bigg|_{-\infty}^{+\infty} \\[0.45cm]
-&=2\pi \\[0.45cm]
-\end{align}
-$$
-
-因此，当$\alpha\rightarrow0$时，$X(j \omega) = 2 \pi \delta (\omega)$，即$x(t) = 1$的傅里叶变换为
-$$
-x(t) = 1 \longleftrightarrow X(j \omega) = 2 \pi \delta (\omega)
-$$
-
-
-]]></content>
-      <categories>
-        <category>博客</category>
-        <category>通信</category>
-      </categories>
-      <tags>
-        <tag>傅里叶变换</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Flask应用部署</title>
     <url>/2019/08/04/note/Flask%E5%BA%94%E7%94%A8%E9%83%A8%E7%BD%B2/</url>
     <content><![CDATA[<p style="display:none">
@@ -112,6 +49,29 @@ $$
       </tags>
   </entry>
   <entry>
+    <title>LSB算法</title>
+    <url>/2019/09/28/note/LSB%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<p style="display:none">
+近期老师布置了一项作业，让我们探索LSB及其改进算法，查了一点资料，做个笔记记一下。作者能力非常有限，此笔记仅供自己参考。首先说一下LSB算法，Least Significant Bits，将秘密信息嵌入到载体图像像素值的最低有效位，也称最不显著，改变这一位置对载体图像的品质影响最小。
+</p>
+
+
+
+	<div class="row">
+    <embed src="/note_pdf/LSB算法.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>图像处理</category>
+      </categories>
+      <tags>
+        <tag>Matlab</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>K-means算法的改进</title>
     <url>/2019/12/23/note/K-means%E7%AE%97%E6%B3%95%E7%9A%84%E6%94%B9%E8%BF%9B/</url>
     <content><![CDATA[<p style="display:none">
@@ -133,51 +93,6 @@ K-means算法由于其简单方便的特性成为最常用的聚类算法之一�
       <tags>
         <tag>Matlab</tag>
         <tag>K-means</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SS-TWR与DS-TWR</title>
-    <url>/2022/12/01/note/SS-TWR%E4%B8%8EDS-TWR/</url>
-    <content><![CDATA[<p style="display:none">
-在UWB 测距方法中，基于信号飞行时间TOF（time of light）技术所用的到方法有单边双向测距法SS-TWR（Single-sided Two-way Ranging）和双边双向测距法DS-TWR（Double-sided Two-way Ranging）。
-
-
-
-	<div class="row">
-    <embed src="/note_pdf/SS-TWR与DS-TWR.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>UWB定位</category>
-      </categories>
-      <tags>
-        <tag>UWB</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LSB算法</title>
-    <url>/2019/09/28/note/LSB%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<p style="display:none">
-近期老师布置了一项作业，让我们探索LSB及其改进算法，查了一点资料，做个笔记记一下。作者能力非常有限，此笔记仅供自己参考。首先说一下LSB算法，Least Significant Bits，将秘密信息嵌入到载体图像像素值的最低有效位，也称最不显著，改变这一位置对载体图像的品质影响最小。
-</p>
-
-
-
-	<div class="row">
-    <embed src="/note_pdf/LSB算法.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>图像处理</category>
-      </categories>
-      <tags>
-        <tag>Matlab</tag>
       </tags>
   </entry>
   <entry>
@@ -204,26 +119,25 @@ K-means算法由于其简单方便的特性成为最常用的聚类算法之一�
       </tags>
   </entry>
   <entry>
-    <title>图像基本运算：几何变换</title>
-    <url>/2019/11/09/note/%E5%9B%BE%E5%83%8F%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%EF%BC%9A%E5%87%A0%E4%BD%95%E5%8F%98%E6%8D%A2/</url>
+    <title>SS-TWR与DS-TWR</title>
+    <url>/2022/12/01/note/SS-TWR%E4%B8%8EDS-TWR/</url>
     <content><![CDATA[<p style="display:none">
-图像的几何变换包括图像的镜像、缩放以及旋转，以下重点介绍图像的缩放和旋转。<br>（1）图像缩放分为比例缩放和非比例缩放，比例缩放指在x方向和y方向按相同的比例缩放，否则为非比例缩放。
-</p>
+在UWB 测距方法中，基于信号飞行时间TOF（time of light）技术所用的到方法有单边双向测距法SS-TWR（Single-sided Two-way Ranging）和双边双向测距法DS-TWR（Double-sided Two-way Ranging）。
 
 
 
 	<div class="row">
-    <embed src="/note_pdf/图像基本运算_几何变换.pdf" width="100%" height="550" type="application/pdf">
+    <embed src="/note_pdf/SS-TWR与DS-TWR.pdf" width="100%" height="550" type="application/pdf">
 	</div>
 
 
 ]]></content>
       <categories>
         <category>笔记</category>
-        <category>图像处理</category>
+        <category>UWB定位</category>
       </categories>
       <tags>
-        <tag>Matlab</tag>
+        <tag>UWB</tag>
       </tags>
   </entry>
   <entry>
@@ -250,16 +164,16 @@ K-means算法由于其简单方便的特性成为最常用的聚类算法之一�
       </tags>
   </entry>
   <entry>
-    <title>图像增强：局部平均法</title>
-    <url>/2019/10/15/note/%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%EF%BC%9A%E5%B1%80%E9%83%A8%E5%B9%B3%E5%9D%87%E6%B3%95/</url>
+    <title>图像基本运算：几何变换</title>
+    <url>/2019/11/09/note/%E5%9B%BE%E5%83%8F%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%EF%BC%9A%E5%87%A0%E4%BD%95%E5%8F%98%E6%8D%A2/</url>
     <content><![CDATA[<p style="display:none">
-局部平均法也称均值滤波，是一种直接在空间域上进行平滑处理的方法。假设图像是由许多灰度恒定的小块组成，相邻像素间存在很高的空间相关性，而噪声则是统计独立的。因此，可用邻域内各像素的灰度平均值代替该像素原来的灰度值，实现图像的平滑。
+图像的几何变换包括图像的镜像、缩放以及旋转，以下重点介绍图像的缩放和旋转。<br>（1）图像缩放分为比例缩放和非比例缩放，比例缩放指在x方向和y方向按相同的比例缩放，否则为非比例缩放。
 </p>
 
 
 
 	<div class="row">
-    <embed src="/note_pdf/图像增强_局部平均法.pdf" width="100%" height="550" type="application/pdf">
+    <embed src="/note_pdf/图像基本运算_几何变换.pdf" width="100%" height="550" type="application/pdf">
 	</div>
 
 
@@ -306,6 +220,29 @@ K-means算法由于其简单方便的特性成为最常用的聚类算法之一�
 
 	<div class="row">
     <embed src="/note_pdf/图像复原基本算法.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>图像处理</category>
+      </categories>
+      <tags>
+        <tag>Matlab</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>图像增强：局部平均法</title>
+    <url>/2019/10/15/note/%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%EF%BC%9A%E5%B1%80%E9%83%A8%E5%B9%B3%E5%9D%87%E6%B3%95/</url>
+    <content><![CDATA[<p style="display:none">
+局部平均法也称均值滤波，是一种直接在空间域上进行平滑处理的方法。假设图像是由许多灰度恒定的小块组成，相邻像素间存在很高的空间相关性，而噪声则是统计独立的。因此，可用邻域内各像素的灰度平均值代替该像素原来的灰度值，实现图像的平滑。
+</p>
+
+
+
+	<div class="row">
+    <embed src="/note_pdf/图像增强_局部平均法.pdf" width="100%" height="550" type="application/pdf">
 	</div>
 
 
@@ -436,40 +373,16 @@ K-means算法由于其简单方便的特性成为最常用的聚类算法之一�
       </tags>
   </entry>
   <entry>
-    <title>极大似然估计修正测距数据</title>
-    <url>/2023/03/20/note/%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E4%BF%AE%E6%AD%A3%E6%B5%8B%E8%B7%9D%E6%95%B0%E6%8D%AE/</url>
+    <title>最简单的八路跑马灯</title>
+    <url>/2020/03/27/note/%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E5%85%AB%E8%B7%AF%E8%B7%91%E9%A9%AC%E7%81%AF/</url>
     <content><![CDATA[<p style="display:none">
-在UWB 测距时，误差主要可分为两类：一类是由于多径、NLOS等引起的误差，这类误差通常大于0且与距离有关；另一类是由于测量噪声、设备时钟漂移等引起的误差，这类误差可近似为均值为0 的高斯分布。因此可使用极大似然估计对数据进行拟合，进而抵消一部分误差的影响。
+1. 试验描述：<br>先通过对PA端口的8位从右向左依次置零，实现8路LED灯依次从上到下点亮，再从左向右把PA端口的8位置零控制8路LED灯依次从小到上点亮，构成跑马灯形式，以此掌握ATmega16单片机的 I\O 端口操作。
 </p>
 
 
 
 	<div class="row">
-    <embed src="/note_pdf/极大似然估计修正测距数据.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>UWB定位</category>
-      </categories>
-      <tags>
-        <tag>UWB</tag>
-        <tag>极大似然</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>步进电机试验</title>
-    <url>/2020/05/08/note/%E6%AD%A5%E8%BF%9B%E7%94%B5%E6%9C%BA%E5%AE%9E%E9%AA%8C/</url>
-    <content><![CDATA[<p style="display:none">
-1.	试验描述：<br>继电器部分由1只PNP型三极管2N5401驱动5V继电器。在继电器没有动作时，继电器触点断开；在继电器动作时，继电器触点闭合。把继电器触点引出，即可控制外部的设备。本实验使用继电器来控制12V的小灯。
-</p>
-
-
-
-	<div class="row">
-    <embed src="/note_pdf/步进电机试验.pdf" width="100%" height="550" type="application/pdf">
+    <embed src="/note_pdf/最简单的八路跑马灯.pdf" width="100%" height="550" type="application/pdf">
 	</div>
 
 
@@ -484,16 +397,16 @@ K-means算法由于其简单方便的特性成为最常用的聚类算法之一�
       </tags>
   </entry>
   <entry>
-    <title>最简单的八路跑马灯</title>
-    <url>/2020/03/27/note/%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E5%85%AB%E8%B7%AF%E8%B7%91%E9%A9%AC%E7%81%AF/</url>
+    <title>步进电机试验</title>
+    <url>/2020/05/08/note/%E6%AD%A5%E8%BF%9B%E7%94%B5%E6%9C%BA%E5%AE%9E%E9%AA%8C/</url>
     <content><![CDATA[<p style="display:none">
-1. 试验描述：<br>先通过对PA端口的8位从右向左依次置零，实现8路LED灯依次从上到下点亮，再从左向右把PA端口的8位置零控制8路LED灯依次从小到上点亮，构成跑马灯形式，以此掌握ATmega16单片机的 I\O 端口操作。
+1.	试验描述：<br>继电器部分由1只PNP型三极管2N5401驱动5V继电器。在继电器没有动作时，继电器触点断开；在继电器动作时，继电器触点闭合。把继电器触点引出，即可控制外部的设备。本实验使用继电器来控制12V的小灯。
 </p>
 
 
 
 	<div class="row">
-    <embed src="/note_pdf/最简单的八路跑马灯.pdf" width="100%" height="550" type="application/pdf">
+    <embed src="/note_pdf/步进电机试验.pdf" width="100%" height="550" type="application/pdf">
 	</div>
 
 
@@ -529,6 +442,30 @@ K-means算法由于其简单方便的特性成为最常用的聚类算法之一�
       <tags>
         <tag>AVR</tag>
         <tag>Proteus</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>极大似然估计修正测距数据</title>
+    <url>/2023/03/20/note/%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E4%BF%AE%E6%AD%A3%E6%B5%8B%E8%B7%9D%E6%95%B0%E6%8D%AE/</url>
+    <content><![CDATA[<p style="display:none">
+在UWB 测距时，误差主要可分为两类：一类是由于多径、NLOS等引起的误差，这类误差通常大于0且与距离有关；另一类是由于测量噪声、设备时钟漂移等引起的误差，这类误差可近似为均值为0 的高斯分布。因此可使用极大似然估计对数据进行拟合，进而抵消一部分误差的影响。
+</p>
+
+
+
+	<div class="row">
+    <embed src="/note_pdf/极大似然估计修正测距数据.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>UWB定位</category>
+      </categories>
+      <tags>
+        <tag>UWB</tag>
+        <tag>极大似然</tag>
       </tags>
   </entry>
   <entry>
@@ -580,6 +517,69 @@ K-means算法由于其简单方便的特性成为最常用的聚类算法之一�
       </tags>
   </entry>
   <entry>
+    <title>x(t)=1的傅里叶变换</title>
+    <url>/2019/07/15/blog/x(t)=1%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/</url>
+    <content><![CDATA[
+
+对于$f(t)$，其傅里叶变换$F(j \omega)$为
+$$
+\begin{equation}
+f(t) \longleftrightarrow F(j \omega) = \int_{-\infty}^{+\infty} f(t) e^{-j \omega t} dt
+\end{equation}
+$$
+
+令$x(t)=e^{-\alpha\left| t \right|},\alpha>0$，则其傅里叶变换为
+
+$$
+\begin{align} 
+X(j\omega) 
+& =\int_{-\infty}^{+\infty}e^{-\alpha\left| t \right|}e^{-j\omega t}dt \\[0.45cm]
+& = \int_{-\infty}^{0}e^{(\alpha-j\omega)t}dt+ \int_{0}^{+\infty}e^{-(\alpha+j\omega)t}dt \\[0.45cm]
+& =\frac{1}{\alpha-j\omega}e^{(\alpha-j\omega)t}\bigg|_{-\infty}^{0}+\frac{1}{\alpha+j\omega}e^{-(\alpha+j\omega)t}\bigg|_{+\infty}^{0} \\[0.45cm]
+& =\frac{1}{\alpha-j\omega}+\frac{1}{\alpha+j\omega} \\[0.45cm]
+& =\frac{2\alpha}{\alpha^2+\omega^2} \\[0.45cm]
+\end{align}  
+$$
+
+由于$\lim_{\alpha \rightarrow 0}{e^{-\alpha \left| t \right|}}=1$，因此，当$\alpha\rightarrow0$时
+$$
+\begin{align} 
+&x(t)=1 \\[0.45cm]
+&X(j\omega)= 
+\begin{cases} 
+\infty & \text{if } \omega=0 \\
+ 0 & \text{if } \omega \ne0 
+ \end{cases} \end{align}
+$$
+
+可知当$\alpha\rightarrow0$时，$X(j \omega)$为$\omega$的冲激函数，其在定义域上的积分为
+
+$$
+\begin{align} 
+{\int_{-\infty}^{+\infty}} \lim_{\alpha \rightarrow 0}X(j \omega) d \omega 
+&=\lim_{\alpha \rightarrow 0}{\int_{-\infty}^{+\infty}}\frac{2\alpha}{\alpha^2+\omega^2}d\omega \\[0.45cm]
+&=\lim_{\alpha \rightarrow 0}{\int_{-\infty}^{+\infty}}\frac{2}{1+{(\frac{\omega}{\alpha})}^2}d(\frac{\omega}{\alpha}) \\[0.45cm]
+&=\lim_{\alpha \rightarrow 0}2\arctan(\frac{\omega}{\alpha})\bigg|_{-\infty}^{+\infty} \\[0.45cm]
+&=2\pi \\[0.45cm]
+\end{align}
+$$
+
+因此，当$\alpha\rightarrow0$时，$X(j \omega) = 2 \pi \delta (\omega)$，即$x(t) = 1$的傅里叶变换为
+$$
+x(t) = 1 \longleftrightarrow X(j \omega) = 2 \pi \delta (\omega)
+$$
+
+
+]]></content>
+      <categories>
+        <category>博客</category>
+        <category>通信</category>
+      </categories>
+      <tags>
+        <tag>傅里叶变换</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>静态数码管扫描</title>
     <url>/2020/04/10/note/%E9%9D%99%E6%80%81%E6%95%B0%E7%A0%81%E7%AE%A1%E6%89%AB%E6%8F%8F/</url>
     <content><![CDATA[<p style="display:none">
@@ -601,6 +601,19 @@ K-means算法由于其简单方便的特性成为最常用的聚类算法之一�
       <tags>
         <tag>AVR</tag>
         <tag>Proteus</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试</title>
+    <url>/2018/09/09/blog/%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<h2 id="简历投递情况"><a href="#简历投递情况" class="headerlink" title="简历投递情况"></a>简历投递情况</h2><h4 id="国家电网-南瑞集团"><a href="#国家电网-南瑞集团" class="headerlink" title="国家电网-南瑞集团"></a>国家电网-南瑞集团</h4><p>链接：<a href="https://job.sgepri.sgcc.com.cn/nari-career-ui/homepage">https://job.sgepri.sgcc.com.cn/nari-career-ui/homepage</a><br>岗位：硬件研发(平台及基础软硬件)<br>城市：武汉<br>状态：待测评<br>备注：知乎评价一般</p>
+]]></content>
+      <categories>
+        <category>博客</category>
+        <category>测试</category>
+      </categories>
+      <tags>
+        <tag>t</tag>
       </tags>
   </entry>
 </search>
