@@ -66,7 +66,8 @@ $$
   <entry>
     <title>测试</title>
     <url>/2018/09/09/blog/%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<h2 id="简历投递情况"><a href="#简历投递情况" class="headerlink" title="简历投递情况"></a>简历投递情况</h2><h4 id="国家电网-南瑞集团"><a href="#国家电网-南瑞集团" class="headerlink" title="国家电网-南瑞集团"></a>国家电网-南瑞集团</h4><p>链接：<a href="https://job.sgepri.sgcc.com.cn/nari-career-ui/homepage">https://job.sgepri.sgcc.com.cn/nari-career-ui/homepage</a><br>岗位：硬件研发(平台及基础软硬件)<br>城市：武汉<br>状态：待测评</p>
+    <content><![CDATA[<h2 id="简历投递情况"><a href="#简历投递情况" class="headerlink" title="简历投递情况"></a>简历投递情况</h2><h4 id="国家电网-南瑞集团"><a href="#国家电网-南瑞集团" class="headerlink" title="国家电网-南瑞集团"></a>国家电网-南瑞集团</h4><p>投递链接：<a href="https://job.sgepri.sgcc.com.cn/nari-career-ui/homepage">https://job.sgepri.sgcc.com.cn/nari-career-ui/homepage</a><br>岗位：硬件研发(平台及基础软硬件)<br>城市：武汉<br>状态：待测评</p>
+<h4 id="中国船舶集团有限公司第七一〇研究所"><a href="#中国船舶集团有限公司第七一〇研究所" class="headerlink" title="中国船舶集团有限公司第七一〇研究所"></a>中国船舶集团有限公司第七一〇研究所</h4><p>投递链接：应届生<br>岗位：DSP工程师（武汉）、嵌入式硬件开发（武汉）、通信工程师（地点 武汉）<br>城市：武汉<br>状态：已投递</p>
 ]]></content>
       <categories>
         <category>博客</category>
@@ -74,30 +75,6 @@ $$
       </categories>
       <tags>
         <tag>t</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>8路指示灯读出8路拨动开关的状态</title>
-    <url>/2020/04/05/note/8%E8%B7%AF%E6%8C%87%E7%A4%BA%E7%81%AF%E8%AF%BB%E5%87%BA8%E8%B7%AF%E6%8B%A8%E5%8A%A8%E5%BC%80%E5%85%B3%E7%9A%84%E7%8A%B6%E6%80%81/</url>
-    <content><![CDATA[<p style="display:none">
-1. 试验描述<br>利用PB端口的8路拨动开关控制PD端口相应的8路LED指示灯亮灭。从而理解单片机中数和位的概念以及数据传递的概念。
-</p>
-
-
-
-	<div class="row">
-    <embed src="/note_pdf/8路指示灯读出8路拨动开关的状态.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>单片机</category>
-      </categories>
-      <tags>
-        <tag>AVR</tag>
-        <tag>Proteus</tag>
       </tags>
   </entry>
   <entry>
@@ -125,6 +102,30 @@ $$
       </tags>
   </entry>
   <entry>
+    <title>8路指示灯读出8路拨动开关的状态</title>
+    <url>/2020/04/05/note/8%E8%B7%AF%E6%8C%87%E7%A4%BA%E7%81%AF%E8%AF%BB%E5%87%BA8%E8%B7%AF%E6%8B%A8%E5%8A%A8%E5%BC%80%E5%85%B3%E7%9A%84%E7%8A%B6%E6%80%81/</url>
+    <content><![CDATA[<p style="display:none">
+1. 试验描述<br>利用PB端口的8路拨动开关控制PD端口相应的8路LED指示灯亮灭。从而理解单片机中数和位的概念以及数据传递的概念。
+</p>
+
+
+
+	<div class="row">
+    <embed src="/note_pdf/8路指示灯读出8路拨动开关的状态.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>单片机</category>
+      </categories>
+      <tags>
+        <tag>AVR</tag>
+        <tag>Proteus</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>K-means算法的改进</title>
     <url>/2019/12/23/note/K-means%E7%AE%97%E6%B3%95%E7%9A%84%E6%94%B9%E8%BF%9B/</url>
     <content><![CDATA[<p style="display:none">
@@ -149,6 +150,28 @@ K-means算法由于其简单方便的特性成为最常用的聚类算法之一�
       </tags>
   </entry>
   <entry>
+    <title>SS-TWR与DS-TWR</title>
+    <url>/2022/12/01/note/SS-TWR%E4%B8%8EDS-TWR/</url>
+    <content><![CDATA[<p style="display:none">
+在UWB 测距方法中，基于信号飞行时间TOF（time of light）技术所用的到方法有单边双向测距法SS-TWR（Single-sided Two-way Ranging）和双边双向测距法DS-TWR（Double-sided Two-way Ranging）。
+
+
+
+	<div class="row">
+    <embed src="/note_pdf/SS-TWR与DS-TWR.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>UWB定位</category>
+      </categories>
+      <tags>
+        <tag>UWB</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LSB算法</title>
     <url>/2019/09/28/note/LSB%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<p style="display:none">
@@ -169,28 +192,6 @@ K-means算法由于其简单方便的特性成为最常用的聚类算法之一�
       </categories>
       <tags>
         <tag>Matlab</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SS-TWR与DS-TWR</title>
-    <url>/2022/12/01/note/SS-TWR%E4%B8%8EDS-TWR/</url>
-    <content><![CDATA[<p style="display:none">
-在UWB 测距方法中，基于信号飞行时间TOF（time of light）技术所用的到方法有单边双向测距法SS-TWR（Single-sided Two-way Ranging）和双边双向测距法DS-TWR（Double-sided Two-way Ranging）。
-
-
-
-	<div class="row">
-    <embed src="/note_pdf/SS-TWR与DS-TWR.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>UWB定位</category>
-      </categories>
-      <tags>
-        <tag>UWB</tag>
       </tags>
   </entry>
   <entry>
@@ -263,16 +264,16 @@ K-means算法由于其简单方便的特性成为最常用的聚类算法之一�
       </tags>
   </entry>
   <entry>
-    <title>图像增强：局部平均法</title>
-    <url>/2019/10/15/note/%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%EF%BC%9A%E5%B1%80%E9%83%A8%E5%B9%B3%E5%9D%87%E6%B3%95/</url>
+    <title>图像增强：直方图均衡化</title>
+    <url>/2019/10/15/note/%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%EF%BC%9A%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E5%8C%96/</url>
     <content><![CDATA[<p style="display:none">
-局部平均法也称均值滤波，是一种直接在空间域上进行平滑处理的方法。假设图像是由许多灰度恒定的小块组成，相邻像素间存在很高的空间相关性，而噪声则是统计独立的。因此，可用邻域内各像素的灰度平均值代替该像素原来的灰度值，实现图像的平滑。
+图像直方图描述图像中各灰度级出现的相对频率，基于直方图的灰度变换，可调整图像直方图到一个预定的形状。例如，一些图像由于其灰度分布集中在较窄的区间，对比度很弱，图像细节看不清楚。此时，可采用图像灰度直方图均衡化处理，使得图像的灰度分布趋向均匀，图像所占有的像素灰度间距拉开，进而加大图像反差，改善视觉效果，达到增强的目的。从人眼视觉特性来考虑，一幅图像的直方图如果是均匀分布的，该图像色调给人的感觉会比较协调。
 </p>
 
 
 
 	<div class="row">
-    <embed src="/note_pdf/图像增强_局部平均法.pdf" width="100%" height="550" type="application/pdf">
+    <embed src="/note_pdf/图像增强_直方图均衡化.pdf" width="100%" height="550" type="application/pdf">
 	</div>
 
 
@@ -286,16 +287,16 @@ K-means算法由于其简单方便的特性成为最常用的聚类算法之一�
       </tags>
   </entry>
   <entry>
-    <title>图像增强：直方图均衡化</title>
-    <url>/2019/10/15/note/%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%EF%BC%9A%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E5%8C%96/</url>
+    <title>图像增强：局部平均法</title>
+    <url>/2019/10/15/note/%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA%EF%BC%9A%E5%B1%80%E9%83%A8%E5%B9%B3%E5%9D%87%E6%B3%95/</url>
     <content><![CDATA[<p style="display:none">
-图像直方图描述图像中各灰度级出现的相对频率，基于直方图的灰度变换，可调整图像直方图到一个预定的形状。例如，一些图像由于其灰度分布集中在较窄的区间，对比度很弱，图像细节看不清楚。此时，可采用图像灰度直方图均衡化处理，使得图像的灰度分布趋向均匀，图像所占有的像素灰度间距拉开，进而加大图像反差，改善视觉效果，达到增强的目的。从人眼视觉特性来考虑，一幅图像的直方图如果是均匀分布的，该图像色调给人的感觉会比较协调。
+局部平均法也称均值滤波，是一种直接在空间域上进行平滑处理的方法。假设图像是由许多灰度恒定的小块组成，相邻像素间存在很高的空间相关性，而噪声则是统计独立的。因此，可用邻域内各像素的灰度平均值代替该像素原来的灰度值，实现图像的平滑。
 </p>
 
 
 
 	<div class="row">
-    <embed src="/note_pdf/图像增强_直方图均衡化.pdf" width="100%" height="550" type="application/pdf">
+    <embed src="/note_pdf/图像增强_局部平均法.pdf" width="100%" height="550" type="application/pdf">
 	</div>
 
 
@@ -545,30 +546,6 @@ K-means算法由于其简单方便的特性成为最常用的聚类算法之一�
       </tags>
   </entry>
   <entry>
-    <title>继电器控制</title>
-    <url>/2020/04/02/note/%E7%BB%A7%E7%94%B5%E5%99%A8%E6%8E%A7%E5%88%B6/</url>
-    <content><![CDATA[<p style="display:none">
-1. 试验描述：<br>继电器部分由1只PNP型三极管2N5401驱动5V继电器。在继电器没有动作时，继电器触点断开；在继电器动作时，继电器触点闭合。把继电器触点引出，即可控制外部的设备。本实验使用继电器来控制12V的小灯。
-</p>
-
-
-
-	<div class="row">
-    <embed src="/note_pdf/继电器控制.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>单片机</category>
-      </categories>
-      <tags>
-        <tag>AVR</tag>
-        <tag>Proteus</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>极大似然估计修正测距数据</title>
     <url>/2023/03/20/note/%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E4%BF%AE%E6%AD%A3%E6%B5%8B%E8%B7%9D%E6%95%B0%E6%8D%AE/</url>
     <content><![CDATA[<p style="display:none">
@@ -590,6 +567,30 @@ K-means算法由于其简单方便的特性成为最常用的聚类算法之一�
       <tags>
         <tag>UWB</tag>
         <tag>极大似然</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>继电器控制</title>
+    <url>/2020/04/02/note/%E7%BB%A7%E7%94%B5%E5%99%A8%E6%8E%A7%E5%88%B6/</url>
+    <content><![CDATA[<p style="display:none">
+1. 试验描述：<br>继电器部分由1只PNP型三极管2N5401驱动5V继电器。在继电器没有动作时，继电器触点断开；在继电器动作时，继电器触点闭合。把继电器触点引出，即可控制外部的设备。本实验使用继电器来控制12V的小灯。
+</p>
+
+
+
+	<div class="row">
+    <embed src="/note_pdf/继电器控制.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>单片机</category>
+      </categories>
+      <tags>
+        <tag>AVR</tag>
+        <tag>Proteus</tag>
       </tags>
   </entry>
   <entry>
