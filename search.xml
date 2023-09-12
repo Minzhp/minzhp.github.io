@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>8路指示灯读出8路拨动开关的状态</title>
+    <url>/2020/04/05/note/8%E8%B7%AF%E6%8C%87%E7%A4%BA%E7%81%AF%E8%AF%BB%E5%87%BA8%E8%B7%AF%E6%8B%A8%E5%8A%A8%E5%BC%80%E5%85%B3%E7%9A%84%E7%8A%B6%E6%80%81/</url>
+    <content><![CDATA[<p style="display:none">
+1. 试验描述<br>利用PB端口的8路拨动开关控制PD端口相应的8路LED指示灯亮灭。从而理解单片机中数和位的概念以及数据传递的概念。
+</p>
+
+
+
+	<div class="row">
+    <embed src="/note_pdf/8路指示灯读出8路拨动开关的状态.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>单片机</category>
+      </categories>
+      <tags>
+        <tag>AVR</tag>
+        <tag>Proteus</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>USART、I2C、SPI、CAN总结</title>
     <url>/2018/09/11/blog/USART%E3%80%81I2C%E3%80%81SPI%E3%80%81CAN%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<p>USART、I2C、SPI、CAN属于嵌入式、硬件、单片机等开发时经常用到的通信协议，找工作面试也经常很容易问到，这里整理总结一下。</p>
@@ -149,24 +173,6 @@
       </tags>
   </entry>
   <entry>
-    <title>测试</title>
-    <url>/2018/09/09/blog/%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<h2 id="简历投递情况"><a href="#简历投递情况" class="headerlink" title="简历投递情况"></a>简历投递情况</h2><h4 id="国家电网-南瑞集团"><a href="#国家电网-南瑞集团" class="headerlink" title="国家电网-南瑞集团"></a>国家电网-南瑞集团</h4><p>投递链接：<a href="https://job.sgepri.sgcc.com.cn/nari-career-ui/homepage">https://job.sgepri.sgcc.com.cn/nari-career-ui/homepage</a><br>岗位：硬件研发(平台及基础软硬件)<br>城市：武汉<br>状态：已测评</p>
-<h4 id="中国船舶集团有限公司第七一〇研究所"><a href="#中国船舶集团有限公司第七一〇研究所" class="headerlink" title="中国船舶集团有限公司第七一〇研究所"></a>中国船舶集团有限公司第七一〇研究所</h4><p>投递链接：应届生<br>岗位：DSP工程师（武汉）、嵌入式硬件开发（武汉）、通信工程师（地点 武汉）<br>城市：武汉<br>状态：已投递（转邮件投递）</p>
-<h4 id="京东方"><a href="#京东方" class="headerlink" title="京东方"></a>京东方</h4><p>投递链接：<a href="http://campus.boe.com/">http://campus.boe.com/</a><br>岗位：【显示器件】品质管理工程师（武汉）（J40388）<br>城市：武汉<br>状态：已测评</p>
-<h4 id="上海晶丰明源半导体股份有限公司"><a href="#上海晶丰明源半导体股份有限公司" class="headerlink" title="上海晶丰明源半导体股份有限公司"></a>上海晶丰明源半导体股份有限公司</h4><p>投递链接：应届生<br>岗位：MCU硬件工程师<br>城市：杭州<br>状态：已投递</p>
-<h4 id="台达电子企业管理（上海）有限公司"><a href="#台达电子企业管理（上海）有限公司" class="headerlink" title="台达电子企业管理（上海）有限公司"></a>台达电子企业管理（上海）有限公司</h4><p>投递链接：应届生<br>岗位：电源嵌入式软件工程师（杭州研发中心）、电源嵌入式软件工程师（杭州研发中心）<br>城市：武汉、杭州<br>状态：已投递</p>
-<h4 id="中达电子-江苏-有限公司"><a href="#中达电子-江苏-有限公司" class="headerlink" title="中达电子(江苏)有限公司"></a>中达电子(江苏)有限公司</h4><p>投递链接：应届生<br>岗位：物联网软件工程师<br>城市：苏州<br>状态：已投递</p>
-]]></content>
-      <categories>
-        <category>博客</category>
-        <category>测试</category>
-      </categories>
-      <tags>
-        <tag>t</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>x(t)=1的傅里叶变换</title>
     <url>/2019/07/15/blog/x(t)=1%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/</url>
     <content><![CDATA[
@@ -230,51 +236,21 @@ $$
       </tags>
   </entry>
   <entry>
-    <title>8路指示灯读出8路拨动开关的状态</title>
-    <url>/2020/04/05/note/8%E8%B7%AF%E6%8C%87%E7%A4%BA%E7%81%AF%E8%AF%BB%E5%87%BA8%E8%B7%AF%E6%8B%A8%E5%8A%A8%E5%BC%80%E5%85%B3%E7%9A%84%E7%8A%B6%E6%80%81/</url>
-    <content><![CDATA[<p style="display:none">
-1. 试验描述<br>利用PB端口的8路拨动开关控制PD端口相应的8路LED指示灯亮灭。从而理解单片机中数和位的概念以及数据传递的概念。
-</p>
-
-
-
-	<div class="row">
-    <embed src="/note_pdf/8路指示灯读出8路拨动开关的状态.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
+    <title>测试</title>
+    <url>/2018/09/09/blog/%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<h2 id="简历投递情况"><a href="#简历投递情况" class="headerlink" title="简历投递情况"></a>简历投递情况</h2><h4 id="国家电网-南瑞集团"><a href="#国家电网-南瑞集团" class="headerlink" title="国家电网-南瑞集团"></a>国家电网-南瑞集团</h4><p>投递链接：<a href="https://job.sgepri.sgcc.com.cn/nari-career-ui/homepage">https://job.sgepri.sgcc.com.cn/nari-career-ui/homepage</a><br>岗位：硬件研发(平台及基础软硬件)<br>城市：武汉<br>状态：已测评</p>
+<h4 id="中国船舶集团有限公司第七一〇研究所"><a href="#中国船舶集团有限公司第七一〇研究所" class="headerlink" title="中国船舶集团有限公司第七一〇研究所"></a>中国船舶集团有限公司第七一〇研究所</h4><p>投递链接：应届生<br>岗位：DSP工程师（武汉）、嵌入式硬件开发（武汉）、通信工程师（地点 武汉）<br>城市：武汉<br>状态：已投递（转邮件投递）</p>
+<h4 id="京东方"><a href="#京东方" class="headerlink" title="京东方"></a>京东方</h4><p>投递链接：<a href="http://campus.boe.com/">http://campus.boe.com/</a><br>岗位：【显示器件】品质管理工程师（武汉）（J40388）<br>城市：武汉<br>状态：已测评</p>
+<h4 id="上海晶丰明源半导体股份有限公司"><a href="#上海晶丰明源半导体股份有限公司" class="headerlink" title="上海晶丰明源半导体股份有限公司"></a>上海晶丰明源半导体股份有限公司</h4><p>投递链接：应届生<br>岗位：MCU硬件工程师<br>城市：杭州<br>状态：已投递</p>
+<h4 id="台达电子企业管理（上海）有限公司"><a href="#台达电子企业管理（上海）有限公司" class="headerlink" title="台达电子企业管理（上海）有限公司"></a>台达电子企业管理（上海）有限公司</h4><p>投递链接：应届生<br>岗位：电源嵌入式软件工程师（杭州研发中心）、电源嵌入式软件工程师（杭州研发中心）<br>城市：武汉、杭州<br>状态：已投递</p>
+<h4 id="中达电子-江苏-有限公司"><a href="#中达电子-江苏-有限公司" class="headerlink" title="中达电子(江苏)有限公司"></a>中达电子(江苏)有限公司</h4><p>投递链接：应届生<br>岗位：物联网软件工程师<br>城市：苏州<br>状态：已投递</p>
 ]]></content>
       <categories>
-        <category>笔记</category>
-        <category>单片机</category>
+        <category>博客</category>
+        <category>测试</category>
       </categories>
       <tags>
-        <tag>AVR</tag>
-        <tag>Proteus</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Flask应用部署</title>
-    <url>/2019/08/04/note/Flask%E5%BA%94%E7%94%A8%E9%83%A8%E7%BD%B2/</url>
-    <content><![CDATA[<p style="display:none">
-服务器：阿里云云翼计划轻量应用服务器，1核2G，40G硬盘<br>系统：CentOS7.3<br>环境：Python3.7+MySQL+Gunicorn+Nginx+Supervisor
-</p>
-
-
-
-	<div class="row">
-    <embed src="/note_pdf/Flask应用部署.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>Web学习</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Flask</tag>
+        <tag>t</tag>
       </tags>
   </entry>
   <entry>
@@ -299,6 +275,30 @@ K-means算法由于其简单方便的特性成为最常用的聚类算法之一�
       <tags>
         <tag>Matlab</tag>
         <tag>K-means</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Flask应用部署</title>
+    <url>/2019/08/04/note/Flask%E5%BA%94%E7%94%A8%E9%83%A8%E7%BD%B2/</url>
+    <content><![CDATA[<p style="display:none">
+服务器：阿里云云翼计划轻量应用服务器，1核2G，40G硬盘<br>系统：CentOS7.3<br>环境：Python3.7+MySQL+Gunicorn+Nginx+Supervisor
+</p>
+
+
+
+	<div class="row">
+    <embed src="/note_pdf/Flask应用部署.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>Web学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Flask</tag>
       </tags>
   </entry>
   <entry>
